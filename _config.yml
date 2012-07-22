@@ -1,0 +1,24 @@
+title: SimpleCode
+production_url : http://simplecode.me
+description: Programming blog
+
+author: Alex Jackson
+twitter: alexjohnj
+github: alexjohnj
+
+permalink:   /:year/:month/:day/:title/
+
+safe:        false
+auto:        true
+server:      false
+server_port: 4000
+baseurl:    /
+
+source:      .
+destination: ./_site
+plugins:     ./_plugins
+
+future:      true
+lsi:         false
+pygments:    true
+markdown:    kramdown

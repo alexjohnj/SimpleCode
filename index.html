@@ -1,0 +1,12 @@
+---
+layout: default
+title: "Hello World"
+---
+
+{% for post in site.posts %}
+<div class="page-header">
+	<h1><a href="{{ post.url }}" style="color:none;">{{ post.title }}</a><small> {{ post.date }}</small></h1>
+	<p>{{ post.content | truncatewords:100 }} </p>
+	<a href="{{ post.url }}" class="btn btn-primary">Read More...</a>
+</div>
+{% endfor %}

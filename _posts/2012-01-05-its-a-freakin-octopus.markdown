@@ -1,0 +1,21 @@
+---
+layout: post
+title: "It's a Freakin' Octopus!"
+date: 2012-01-05 12:00
+---
+
+## The Octopus' Garden
+
+If you're seeing this page then the conversion of SimpleCode from a Wordpress.com blog to a Heroku hosted, Octopress based blog has been a success! Regular readers will note that things look a <del>little</del> lot different. I've converted the blog to a Octopress blog, meaning it's now a static blog making it faster and, in my opinion, easier to manage. [Octopress](http://octopress.org) is a static blogging framework “designed for hackers”. Essentially, you write blog posts in Markdown (which is really easy to [learn](/blog/2011/12/11/getting-started-with-markdown/)), run them through a generator which churns out a folder containing all the posts in HTML format, some Javascript & some styling. The folder can be pushed to virtually any server and then it's accessible on the web. Simple.
+
+<!-- more -->
+
+I really like Octopress. It's easy to use (assuming you've got some terminal know-how), very fast and includes a really nice default theme. The only modifications I made to theme were adjusting the font size. Deploying the blog to Heroku was a breeze too. 
+
+If you want to get in touch with a question, you can email me, <mailto:contact@scode.me>. Before doing that though, you may want to checkout the new [sample code GitHub repository](https://github.com/alexjohnj/simplecode-sample-source) I made. The repository includes sample code for all the tutorials on this blog which benefit from it (nearly all of them) in an easy to access form. You can browse the source code and view files on the GitHub website but, if you want to compile the sample code, you'll need to clone the repository. [If you don't know how to do this](http://help.github.com/), don't worry! Next to the description of the repository at the top of the page, there's a button to download a zip archive of the repository. Click this and then you'll begin downloading a compressed copy of the repository. It's really small at the moment, a few hundred kilobytes. 
+
+These new “features” of SimpleCode are here to compensate for something though. Comments are off. While Octopress supports comments via Disqus, I've never had any luck getting it to work (not just with Octopress). I was considering disabling comments on the Wordpress.com blog, given that the majority of comments received were spam and have taken the reboot of SimpleCode as an opportunity to do this. As mentioned above though, if you want to get in touch, you can via email.
+
+Some smaller changes to the blog have also been made. Some posts have been re-written or re-worded, with spelling mistakes fixed. I found that Wordpress seems to convert quotation marks (&quot;) in code blocks to actual quotation marks (“”). This caused syntax errors if you copy and pasted the code, so I've (hopefully) fixed all instances of these. I've also added a new section to the blog. “Reading” is currently a collection of recommended programming books, most of which are from my [post](/blog/2011/05/21/top-5-cocoa-programming-books/) regarding the subject of Cocoa books. There's also a few new ones thrown in there too (Haskell anybody?). 
+
+I've worked on this reboot for a few weeks now (even over Christmas) and I've hopefully ironed out any problems with the conversion such as broken links, formatting errors e.t.c. I'll keep working on the actual source of the site a few weeks after it goes live and so, if you do find an error, send me and email, <mailto:contact@scode.me>.

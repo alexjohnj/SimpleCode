@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Using Growl In Cocoa Applications</title>
+		<link rel="stylesheet" type="text/css" href="/styles/css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="/styles/css/pygments.css" />
+	</head>
+	<body>
+		<div class="navbar">
+		  <div class="navbar-inner">
+			<div class="container">
+			  <a class="brand" href="/">SimpleCode</a>
+			  <ul class="nav">
+				<li class="active">
+			  	<a href="/">Home</a>
+				</li>
+				<li><a href="/Projects/">Projects</a></li>
+				<li><a href="/Archive">Archive</a></li>
+			  </ul>
+			</div>
+		  </div>
+		</div>
+		
+		<div class="container-fluid">
+		  <div class="row-fluid">
+			<div class="span10">
+			  <div class="page-header">
+	<h1>Using Growl In Cocoa Applications <small>2012-04-06 13:30:00 +0100</small></h1>
+</div>
+<p>Until Mac OS 10.8, Apple has failed to provide a good method for Cocoa applications (and other types of Mac OS X applications) to display notifications. As a solution to this problem, a third party open source project known as Growl exists to provide a notification framework for Mac OS X applications that is easy and convenient to use. The Growl framework is really easy to use and has a great, detailed <a href="http://growl.info/documentation/developer/implementing-growl.php">documentation set</a> available to developers, however the documentation seems to lack a quick start guide to get people up and running with Growl quickly. The documentation spends a lot of time explaining the ins and outs of Growl so this post aims to be a quick and concise guide to setting up Growl in your Cocoa application, showing you how to post a notification and receive a callback when a notification is clicked, the two most common Growl tasks. </p>
+
+<!-- more -->
+
+<p>A small side note, unlike my usual tutorials, we won’t be building a sample application in this tutorial, I’ll assume you already have an application and know where you want to put your Growl notifications. I will, however, leave a sample application in the <a href="https://github.com/alexjohnj/simplecode-sample-source">SimpleCode GitHub repository</a> to aid you if you get stuck. </p>
+
+<h2 id="adding-the-growl-framework">1. Adding the Growl Framework</h2>
+
+<p>The first step to using Growl in your application is to import the framework into your program. This is quite simple. First, download the Growl SDK from the <a href="http://growl.info/downloads">Growl website</a>. Then, drag the <em>Growl.framework</em> folder into your Xcode project via Xcode. In the sheet that appears, ensure that “Copy items into destination group’s folder…” is selected. Upon finishing, open up your products build phases and drag the <em>Growl.framework</em> item from the Xcode navigator to the copy files section of your build phases. Ensure that the destination is <em>Frameworks</em>. Here’s a nice diagram to sum that up. </p>
+
+<p><img src="/images/posts/2012/04/usingGrowlInCocoa/growlFrameworkImport1.png" /></p>
+
+<p><img src="/images/posts/2012/04/usingGrowlInCocoa/growlFrameworkImport2.png" /></p>
+
+<p><img src="/images/posts/2012/04/usingGrowlInCocoa/growlFrameworkImport3.png" /></p>
+
+<h2 id="create-a-notification-dictionary">2. Create a Notification Dictionary</h2>
+
+<p>When using Growl with your application it’s important to remember to create a file called <em>Growl Registration Ticket.growlRegDict</em>. This is a simple plist file that contains an array of keys for all the notifications you will be displaying. To create one, simply create a new property list file in Xcode called <em>Growl Registration Ticket.growlRegDict</em>. Then, edit it based around this template:</p>
+
+<div class="highlight"><pre><code class="xml"><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="cp">&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span>
+<span class="nt">&lt;plist</span> <span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;dict&gt;</span>
+		<span class="nt">&lt;key&gt;</span>Ticket Version<span class="nt">&lt;/key&gt;</span>
+		<span class="nt">&lt;integer&gt;</span>1<span class="nt">&lt;/integer&gt;</span>
+		<span class="nt">&lt;key&gt;</span>AllNotifications<span class="nt">&lt;/key&gt;</span>
+		<span class="nt">&lt;array&gt;</span>
+			<span class="nt">&lt;string&gt;</span>growlNotificationKey<span class="nt">&lt;/string&gt;</span>
+			<span class="nt">&lt;string&gt;</span>anotherGrowlNotificationKey<span class="nt">&lt;/string&gt;</span>
+			<span class="nt">&lt;string&gt;</span>andAnother<span class="nt">&lt;/string&gt;</span>
+		<span class="nt">&lt;/array&gt;</span>
+	<span class="nt">&lt;/dict&gt;</span>
+<span class="nt">&lt;/plist&gt;</span>
+</code></pre>
+</div>
+
+<h2 id="posting-a-growl-notification">3. Posting A Growl Notification</h2>
+
+<p>Posting a notification in growl is really easy. It simply requires you to import a framework into the class you want to use Growl in and then calling a simple method on a shared object known as the GrowlApplicationBridge. To begin, add the following to the top of the header file of the class you want to use Growl in. </p>
+
+<div class="highlight"><pre><code class="objc"><span class="cp">#import &lt;Growl/Growl.h&gt;</span>
+</code></pre>
+</div>
+
+<p>Simple enough. Next, when you want to post a notification, simply call the following method:</p>
+
+<div class="highlight"><pre><code class="objc"><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">someMethod</span><span class="p">{</span>
+	    <span class="p">[</span><span class="n">GrowlApplicationBridge</span> <span class="nl">notifyWithTitle:</span><span class="s">@&quot;A notification&quot;</span>
+                                <span class="nl">description:</span><span class="s">@&quot;A short description of the notification&quot;</span>
+                           <span class="nl">notificationName:</span><span class="s">@&quot;aNotification&quot;</span>
+                                   <span class="nl">iconData:</span><span class="nb">nil</span>
+                                   <span class="nl">priority:</span><span class="mi">0</span>
+                                   <span class="nl">isSticky:</span><span class="n">NO</span>
+                               <span class="nl">clickContext:</span><span class="nb">nil</span><span class="p">];</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>This will create a notification with the specified details and display it to the user. Most of the method’s arguments are self-explanatory but just to make it clear:</p>
+
+<ul>
+  <li><code>title:</code> - The title of the notification displayed to the user.</li>
+  <li><code>description:</code> - A <strong>short</strong> description. Long descriptions can be truncated depending on the user’s notification style. </li>
+  <li><code>notificationName:</code> - This is the name of the notification as specified in your <em>Growl Registration Ticket.growlRegDict</em>. </li>
+  <li><code>iconData:</code> - An icon to be displayed with the notification, of type NSData. Nil will display your application’s icon. An empty NSData object will display no icon.</li>
+  <li><code>priority:</code> - A number from -2 (low) to +2 (high) indicating the importance of the notification. If the notification style the user uses supports it, a different style notification will be displayed based on priority. 0 is neutral. </li>
+  <li><code>isStick:</code> - Sticky notifications stick around until closed manually by the user, rather than dismissing themselves. </li>
+  <li><code>clickContext</code> - Normally a string indicating what to do when the notification is clicked. More on this below. </li>
+</ul>
+
+<p>That’s all if all you want to do is display a notification. Growl notifications, however, offer the ability to give callbacks when clicked on, opening up some new possibilities. </p>
+
+<h2 id="bonus---callbacks">Bonus - Callbacks</h2>
+
+<p>Implementing callbacks into your application requires the use of a delegate to tell inform you when a notification is clicked and what to do. Using it is quite simple. The first thing to do is to register a Growl delegate. In your Growl delegate’s class, you need to specify that it conforms to the <code>GrowlApplicationBridgeDelegate</code> protocol. Edit the <code>@interface</code> section of the class’ delegate to look like this:</p>
+
+<div class="highlight"><pre><code class="objc"><span class="k">@interface</span> <span class="nc">GrowlDelegate</span> : <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">GrowlApplicationBridgeDelegate</span><span class="o">&gt;</span>
+</code></pre>
+</div>
+
+<p>Then you need to inform Growl that you’ll be using this object as a delegate. You can do so using the following method:</p>
+
+<div class="highlight"><pre><code class="objc"><span class="p">[</span><span class="n">GrowlApplicationBridge</span> <span class="nl">setGrowlDelegate:</span><span class="n">myGrowlDelegate</span><span class="p">];</span>
+</code></pre>
+</div>
+
+<p>You may want to put that method in your AppDelegate’s <code>didFinishLaunching:</code> method. </p>
+
+<p>Now, in order to receive callbacks, you need to include the following method in your delegate’s implementation file. </p>
+
+<div class="highlight"><pre><code class="objc"><span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">growlNotificationWasClicked:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">clickContext</span><span class="p">{</span>
+	<span class="c1">// code to execute when notification clicked</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>This will get executed when a notification is clicked however we need to provide a contextInfo argument in order to make use of this. When creating a Growl notification, we can now provide an argument to the contextInfo parameter in order to do something with this method. As mentioned above, we normally pass a string as an argument and then identify the argument and execute a method accordingly, like this:</p>
+
+<div class="highlight"><pre><code class="objc"><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">someMethod</span><span class="p">{</span>
+	    <span class="p">[</span><span class="n">GrowlApplicationBridge</span> <span class="nl">notifyWithTitle:</span><span class="s">@&quot;A notification&quot;</span>
+                                <span class="nl">description:</span><span class="s">@&quot;A short description of the notification&quot;</span>
+                           <span class="nl">notificationName:</span><span class="s">@&quot;aNotification&quot;</span>
+                                   <span class="nl">iconData:</span><span class="nb">nil</span>
+                                   <span class="nl">priority:</span><span class="mi">0</span>
+                                   <span class="nl">isSticky:</span><span class="n">NO</span>
+                               <span class="nl">clickContext:</span><span class="s">@&quot;someNotificationClick&quot;</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">growlNotificationWasClicked:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">clickContext</span><span class="p">{</span>
+	<span class="k">if</span><span class="p">([</span><span class="n">clickContext</span> <span class="nl">isEqualToString:</span><span class="s">@&quot;someNotificationClick&quot;</span><span class="p">]){</span>
+		<span class="p">[</span><span class="n">self</span> <span class="n">doSomething</span><span class="p">];</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Now, when a notification with a clickContext with a value of “someNotificationClick” is clicked, it’ll execute the <code>doSomething:</code> method. You can repeat this technique of using strings for callbacks for multiple click callbacks. </p>
+
+<h2 id="wrap-up">Wrap-up</h2>
+
+<p>That’s the basics of using Growl for it’s two most common functions, notifying the user and doing something when a notification is clicked. There are numerous other methods at Growl’s disposal and instructions on their usage are available in detail on the Growl developer’s documentation page <a href="http://growl.info/documentation/developer/implementing-growl.php">here</a>. It’s a good, albeit lengthy read but it contains a lot of information on using the Growl delegate, something we only touched upon. </p>
+
+<p>If you’re having problems with using Growl, I’ve made a small example application demonstrating how to post notifications and receive callbacks on the <a href="https://github.com/alexjohnj/simplecode-sample-source">SimpleCode GitHub repository</a>, if you’re interested in seeing it. </p>
+
+			</div>
+			<div class="span2">
+				<div class="well">
+			  <p>HELLO WORLD</p>
+		  </div>
+			</div>
+		  </div>
+		</div>
+		
+	</body>
+</html>
