@@ -2,7 +2,8 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>{{ page.title }}</title>
+		{% if page.title %}<title>{{ page.title }} · {{ site.title }}</title>
+		{% else %}<title>{{ site.title }}</title>{% endif %}
 		<link rel="stylesheet" type="text/css" href="/styles/css/bootstrap.css" />
 		<link rel="stylesheet" type="text/css" href="/styles/css/pygments.css" />
 	</head>
