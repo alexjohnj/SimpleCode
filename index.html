@@ -10,10 +10,12 @@ layout: default
 </div>
 {% endfor %}
 
-<div id="paginator">
-	{% if paginator.next_page %}<a href="/page{{ paginator.next_page }}">Older Posts</a>{% endif %}
+<div class="pagination">
+	<ul>
+	{% if paginator.next_page %}<li><a href="/page{{ paginator.next_page }}">Older Posts</a></li>{% endif %}
 	{% if paginator.previous_page %}
-	{% if paginator.previous_page == 1 %}<a href="/">New Posts</a>
-	{% else %}<a href="/page{{ paginator.previous_page }}">New Posts</a>{% endif %}
+	{% if paginator.previous_page == 1 %}<li><a href="/">Newer Posts</li></a>
+	{% else %}<li><a href="/page{{ paginator.previous_page }}">Newer Posts</a></li>{% endif %}
 	{% endif %}
+	</ul>
 </div>
