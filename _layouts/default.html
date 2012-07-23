@@ -6,6 +6,21 @@
 		{% else %}<title>{{ site.title }}</title>{% endif %}
 		<link rel="stylesheet" type="text/css" href="/styles/css/bootstrap.css" />
 		<link rel="stylesheet" type="text/css" href="/styles/css/pygments.css" />
+		
+		{% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}, {{ site.keywords }}">
+		{% elsif page.keywords == null %}	
+		<meta name="keywords" content="{{ site.keywords }}">
+		<meta name="description" content="{{ site.description }}">
+		{% endif %}
+		{% if page.description %}
+		<meta name="description" content="{{ page.description }}">
+		{% endif %}
+		{% if page.author %}
+		<meta name="author" content="{{ page.author }}">
+		{% elsif page.author == null %}
+		<meta name="author" content="{{ site.author }}">
+		{% endif %}
+		
 	</head>
 	<body>
 		<div class="navbar">
