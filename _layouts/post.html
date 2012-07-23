@@ -7,7 +7,9 @@ layout: default
 	{% if page.author %}<h1><small>By {{ page.author }}</small></h1>
 	{% else %}<h1><small>By {{ site.author }}</small></h1>{% endif %}
 </div>
-{{ content }}
+<article>
+	{{ content }}
+</article>
 <hr/>
 <div id="pageNavigation">
 	<h4>
