@@ -6,6 +6,8 @@ author: Alex Jackson
 twitter: alexjohnj
 github: alexjohnj
 
+paginate: 5
+
 permalink:   /:year/:month/:day/:title/
 
 safe:        false
