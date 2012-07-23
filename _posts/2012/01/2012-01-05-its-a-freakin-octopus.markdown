@@ -1,7 +1,9 @@
 ---
 layout: post
 title: "It's a Freakin' Octopus!"
-date: 2012-01-05 12:00
+published: true
+description: "This blog is now powered by Octopress & hosted on Heroku! No more Wordpress!"
+keywords: "octopress, wordpress, comments, heroku, static, baked, website, update"
 ---
 
 ## The Octopus' Garden

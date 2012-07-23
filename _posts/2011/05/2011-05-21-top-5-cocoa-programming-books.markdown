@@ -1,0 +1,46 @@
+---
+layout: post
+title: "Top 5 Cocoa Programming Books"
+description: "Outlines the top 5 Cocoa programming books I used to learn to program in objective-c and cocoa." 
+keywords: "top 5, list, cocoa, programming, iOS, mac os x, development, learn" 
+---
+
+It’s now just over one year since I started my adventure into the world of Mac development (it’s actually a little longer but I wouldn’t call any work I did before that "learning") and so far, it’s been a fun one. I finally feel ready to call my self a ‘decent’ programmer rather than a total novice. Throughout the past year, I’ve found several incredibly handy resources including websites, books, applications and people. In this post though, I want to talk about just one of those; Books. 
+
+<!-- more -->
+
+Personally, books have been my main source of learning about Cocoa as I only know one person who I could learn from (and he programs in Java). Unfortunately, I’ve wasted a lot of money on programming books too, since some of the books out there are, quite frankly, crap. However, hopefully this list of books I’m going to give you will prevent you from wasting your money (and time) on bad books and will help you make informed decisions on what to spend your money on. 
+
+## [Programming In Objective C 2.0 (Developers Library) 2nd Edition](http://www.amazon.co.uk/Programming-Objective-C-2-0-Developers-Library/dp/0321566157/ref=sr_1_1?ie=UTF8&qid=1305659096&sr=8-1) - Stephen G Kochan
+
+For me, this book has proven incredibly important for learning to develop for the Mac. Whilst this book doesn’t specifically teach you how to program in Cocoa, it does teach you the main programming language of the Mac which you use when writing Cocoa applications, Objective C. Furthermore, it teaches it to you in detail. The 2nd edition of the book has been updated for Objective C 2.0 and the 3rd edition will be out very soon. This book covers everything you need to know to start writing Objective C (and some, basic, Cocoa) applications. It explains much of the language in a great amount of detail and it progresses in difficulty and complexity at a nice, steady rate. This should be one of the first books you buy and read and it’s a steal at £15. Even if you have no background knowledge in programming you should be able to follow along with this book (although some background knowledge would make it easier).
+
+Summary: Essential
+
+## [Learn C On The Mac (Learn Series)](http://www.amazon.co.uk/Learn-C-Mac-Dave-Mark/dp/1430218096/ref=sr_1_1?s=books&ie=UTF8&qid=1305659621&sr=1-1) – Dave Mark
+
+Again, this is one of those books that has been important to me for learning to develop for the Mac. This is the book that I recommend you purchase first. The book will teach you the C programming language from the very basics to the more advanced topics. If you didn’t know, Objective C is a superset of C therefore any C code is valid Objective C code. I therefore recommend you get this book since it will teach you perhaps 90% of the C language and give you a massive head start when learning Objective C. Seriously, if you read this first, wrapping your head around the concepts of Objective C shouldn’t take you any longer than a week. A major advantage of learning C would be that the vast majority of modern day programming languages base themselves on the language. Therefore, you should be able to learn any other language with relative ease. The book itself is incredibly well written. The examples used are easy to follow but have enough complexity to show you some practical examples of the concepts of C. The author also has a great way of explaining the concepts of C that is both clear and concise. This book is actually part of a series of books (Learn Objective C on the Mac & Learn Cocoa ” ” “) . Whilst I haven’t read those books from what I’ve heard, they are also very good books.
+
+Summary: Essential
+
+## [Cocoa Programming For Mac OS X 3rd/2nd Edition](http://www.amazon.co.uk/Cocoa-Programming-Mac-OS-X/dp/0321503619/ref=sr_1_1?s=books&ie=UTF8&qid=1305660269&sr=1-1) – Aaron Hillegass
+
+Ask any Cocoa developer to recommend a single book for learning Cocoa and they will say this one and with good reason! This book covers Cocoa inside and out, discussing the very basics of Cocoa as well as, some, advanced topics. Not only that but it covers them in excellent detail in a clear, easy to follow style. If you read through the entirety of this book and understand it all then you could call yourself a Cocoa genius! And there is no doubt that you will. The 2nd edition of this book covers a plethora of topics including KVC, Bindings, Notifications, Archiving, Undo Manager and many more. The 3rd edition expands on these topics adding Core Data, Core Animation and Garbage Collection to the mix (as well as offering updated pictures & code for OS X Leopard). The reason why I mention both editions is because sometimes you can find the 2nd edition for insanely cheap prices (I got my copy for £3.99 off Amazon!) and it still covers everything you need to get started with Cocoa. If money’s a little tight then, it would do you no harm to get the 2nd edition instead of the 3rd although to be honest, the 3rd edition does offer fantastic value for money. If you are going to purchase a new copy, you may be better off waiting a little since a 4th edition will highly likely be out soon offering updated information for Xcode 4 (however this is unconfirmed as of 17/05/11) and OS 10.6/10.7. Again, I highly recommend this book for any one getting started with Cocoa although it is important that you read this book with background knowledge of Objective C as the language isn’t explained in the book in much detail (There is only one brief chapter on Objective C) with it instead focusing on Cocoa in detail.
+
+Summary: Essential
+
+## [Cocoa and Objective-C: Up and Running](http://www.amazon.co.uk/Cocoa-Objective-C-Running-Scott-Stevenson/dp/0596804792/ref=sr_1_9?s=books&ie=UTF8&qid=1305660954&sr=1-9) - Scott Stevenson
+
+Judging by the sole review of this book on Amazon, I was a bit weary when purchasing this book since it apparently lacked sufficient explanation. I found this somewhat surprising since the author of the book is also the individual who maintains the fantastic CocoaDevCentral. I went into this book with a somewhat negative perception but, to be honest, I’ve found the book very useful. As expected, Mr Stevenson has a fantastic writing style that is clear and he explains things well. The examples used in the book are pretty decent at demonstrating the key concepts of Cocoa too. The beauty of this book though is its content. As the title implies, this book is there to help people get up and running quickly with Cocoa and Objective-C. The book covers the basics of C, followed by Objective C and then Cocoa so essentially, somebody with no programming knowledge could pick this book up and learn the basics of Cocoa from it in a very short period of time. Obviously it doesn’t go into as much detail as some other books I have mentioned but if you're looking to quickly learn to program and want to do so in Cocoa, you can’t go wrong with this book.
+
+Summary: A very good, albeit, brief look at Cocoa. If you don’t need all the information of the aforementioned books and you’ve never even touched a programming language before (or in recent history) then this book will get you up and running quickly.
+
+## [Cocoa Programming Developer’s Handbook (Developers Library)](http://www.amazon.co.uk/Cocoa-Programming-Developers-Handbook-Library/dp/0321639634/ref=sr_1_1?ie=UTF8&qid=1305661566&sr=1-1) – Multiple Authors
+
+Once you finish Aaron Hillegass’ Cocoa Programming For Mac OS X, this is the book I’d tell you to read next. Actually, “read” is the wrong word. Rather “use” is a better word. This book is exactly what it says on the tin, a handbook for Cocoa. The book covers the ins and outs of Cocoa in an excruciating amount of detail. It is essentially a guided tour of everything Cocoa has to offer (well, maybe not everything but you get the picture). If you want to know how to do X in your Cocoa application, you can put money on it being in this book. This book isn’t a cookbook but it does give many examples on how to use the different API’s of Cocoa. This book also isn’t for the beginner. This is for the intermediate to advanced developer who just need the fact and not the explanation (and believe me, beginners, you need that explanation). When you feel you’re getting good at Cocoa, get this book but until then, don’t bother as it will just be an expensive addition to your bookshelf for many months.
+
+Summary: Once you’ve got enough experience under your belt, this book is a fantastic edition to any developers library.
+
+Well, I hope this has been useful in helping you decide on what books to buy. If this post gets a positive response, I may do another post on my favourite online resources for Cocoa programming.
+
+Follow the author of this post, [@alexjohnj](http://twitter.com/alexjohnj).

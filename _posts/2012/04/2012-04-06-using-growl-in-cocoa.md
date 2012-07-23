@@ -1,9 +1,6 @@
 ---
 layout: post
 title: "Using Growl In Cocoa Applications"
-date: 2012-04-06 13:30
-comments: false
-categories: [Cocoa, Objective-C, Frameworks]
 description: "Outlines how to quickly start using Growl in your Cocoa applications to post notifications and receive click backs."
 keywords: "cocoa, objective-c, using growl in cocoa, growl notifications, notifications in 10.7 cocoa, easy growl guide, growl quick start guide"
 ---
@@ -28,7 +25,7 @@ The first step to using Growl in your application is to import the framework int
 
 When using Growl with your application it's important to remember to create a file called *Growl Registration Ticket.growlRegDict*. This is a simple plist file that contains an array of keys for all the notifications you will be displaying. To create one, simply create a new property list file in Xcode called *Growl Registration Ticket.growlRegDict*. Then, edit it based around this template:
 
-{% highlight xml+smarty %}
+{% highlight lang:xml %}
 
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -52,13 +49,13 @@ When using Growl with your application it's important to remember to create a fi
 
 Posting a notification in growl is really easy. It simply requires you to import a framework into the class you want to use Growl in and then calling a simple method on a shared object known as the GrowlApplicationBridge. To begin, add the following to the top of the header file of the class you want to use Growl in. 
 
-{% highlight objc %}
+{% highlight lang:objc %}
 #import <Growl/Growl.h>
 {% endhighlight %}
 
 Simple enough. Next, when you want to post a notification, simply call the following method:
 
-{% highlight objc %}
+{% highlight lang:objc %}
 - (void)someMethod{
 	    [GrowlApplicationBridge notifyWithTitle:@"A notification"
                                 description:@"A short description of the notification"
@@ -86,13 +83,13 @@ That's all if all you want to do is display a notification. Growl notifications,
 
 Implementing callbacks into your application requires the use of a delegate to tell inform you when a notification is clicked and what to do. Using it is quite simple. The first thing to do is to register a Growl delegate. In your Growl delegate's class, you need to specify that it conforms to the `GrowlApplicationBridgeDelegate` protocol. Edit the `@interface` section of the class' delegate to look like this:
 
-{% highlight objc %}
+{% highlight lang:objc %}
 @interface GrowlDelegate : NSObject <GrowlApplicationBridgeDelegate>
 {% endhighlight %}
 
 Then you need to inform Growl that you'll be using this object as a delegate. You can do so using the following method:
 
-{% highlight objc %}
+{% highlight lang:objc %}
 [GrowlApplicationBridge setGrowlDelegate:myGrowlDelegate];
 {% endhighlight %}
 
@@ -100,7 +97,7 @@ You may want to put that method in your AppDelegate's `didFinishLaunching:` meth
 
 Now, in order to receive callbacks, you need to include the following method in your delegate's implementation file. 
 
-{% highlight objc %}
+{% highlight lang:objc %}
 -(void)growlNotificationWasClicked:(id)clickContext{
 	// code to execute when notification clicked
 }
@@ -108,7 +105,7 @@ Now, in order to receive callbacks, you need to include the following method in 
 
 This will get executed when a notification is clicked however we need to provide a contextInfo argument in order to make use of this. When creating a Growl notification, we can now provide an argument to the contextInfo parameter in order to do something with this method. As mentioned above, we normally pass a string as an argument and then identify the argument and execute a method accordingly, like this:
 
-{% highlight objc %}
+{% highlight lang:objc %}
 - (void)someMethod{
 	    [GrowlApplicationBridge notifyWithTitle:@"A notification"
                                 description:@"A short description of the notification"
