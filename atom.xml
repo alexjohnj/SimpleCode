@@ -1,0 +1,27 @@
+---
+layout: nil
+---
+
+<?xml version="1.0" encoding="utf-8"?>
+ 
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+        <title>{{ site.title }}</title>
+        <link href="http://simplecode.me/atom.xml" rel="self" />
+        <link href="http://simplecode.me" />
+        <updated>{{ site.time | date_to_xmlschema }}</updated>
+        <id>{{ site.url }}</id>
+
+        {% for post in site.posts limit:5 %} 
+        <entry>
+                <title>{{ post.title }}</title>
+                <link href="{{ site.url }}{{ post.url }}" />
+                <id>{{ site.url }}{{ post.id }}</id>
+                <updated>{{ post.date | date_to_xmlschema }}</updated>
+                <author>
+                      <name>{{ post.author }}</name>
+                </author>
+                <content type="html"><![CDATA[ {{ post.content }} ]]></content>
+        </entry>
+        {% endfor %}
+</feed>
