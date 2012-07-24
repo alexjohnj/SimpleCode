@@ -1,5 +1,5 @@
 ---
-title: "Building a Preferences Window in Cocoa:  MASPreferences"
+title: "Building a Preferences Window in Cocoa - MASPreferences"
 layout: post
 ---
 
@@ -120,5 +120,3 @@ Another thing I noticed is that MASPreferencesWindowController actually stores w
 - [Vadim Shpakovski's Website](http://www.shpakovski.com/)
 - [BWToolkit](http://brandonwalkin.com/bwtoolkit/)
 - [SS_PrefsController](http://mattgemmell.com/source/)
-
-Want to know how to store all of those preferences, check out my other post; [A Cocoa Bindings Example: Creating A Preferences Window](/2011/05/15/creating-a-preference-window-in-cocoa-using-bindings/)

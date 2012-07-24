@@ -11,7 +11,7 @@ A few weeks ago, I wrote a post introducing you to the basics of bindings. In it
 
 ## Prior Reading
 
-If you haven't already, reading my [previous](/blog/2011/04/29/intro-to-bindings-in-cocoa-as-well-as-kvc) post on bindings will give you all the background information you need to get started with this tutorial & it will help you understand *how* bindings work.  This tutorial assumes you know your way around Xcode (4) and also assumes you know the basics of Objective-C.
+If you haven't already, reading my [previous](/2011/04/09/introduction-to-cocoa-bindings/) post on bindings will give you all the background information you need to get started with this tutorial & it will help you understand *how* bindings work.  This tutorial assumes you know your way around Xcode (4) and also assumes you know the basics of Objective-C.
 
 ## Creating the Application
 
@@ -123,6 +123,6 @@ Build & run the application and open the preferences window. Toggling the check 
 
 ## Conclusion
 
-If you've ever tried to create a preferences window without bindings, you'll be able to tell that using bindings is substantially easier, faster and requires far fewer lines of code. The reduction in “glue code” will make your projects much easier to maintain *and* may help to reduce the number of bugs in your application, since there's less opportunity for error. Creating a preferences window is the most common use of bindings but there are various other applications for bindings too, such as [setting up tables](/blog/2011/07/14/nstableviews-nsarraycontrollers-and-more-bindings/) in a relatively short amount of time. Just remember, bindings aren't magical! Take some time to learn how they work, it'll save you a lot of pain later on. 
+If you've ever tried to create a preferences window without bindings, you'll be able to tell that using bindings is substantially easier, faster and requires far fewer lines of code. The reduction in “glue code” will make your projects much easier to maintain *and* may help to reduce the number of bugs in your application, since there's less opportunity for error. Creating a preferences window is the most common use of bindings but there are various other applications for bindings too, such as [setting up tables](/2011/07/14/nstableviews-nsarraycontrollers-and-more-bindings/) in a relatively short amount of time. Just remember, bindings aren't magical! Take some time to learn how they work, it'll save you a lot of pain later on. 
 
 Follow the author of this post, [@alexjohnj](http://twitter.com/alexjohnj).
