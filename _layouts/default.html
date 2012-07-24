@@ -8,10 +8,7 @@
 		<link rel="stylesheet" type="text/css" href="/styles/css/pygments.css" />
 		<link rel="stylesheet" type="text/css" href="/styles/css/custom.css" />
 		
-		{% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}, {{ site.keywords }}">
-		{% elsif page.keywords == null %}	
-		<meta name="keywords" content="{{ site.keywords }}">
-		{% endif %}
+		{% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
 		{% if page.author %}
 		<meta name="author" content="{{ page.author }}">
 		{% elsif page.author == null %}
