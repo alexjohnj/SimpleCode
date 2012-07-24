@@ -1,6 +1,5 @@
 title: SimpleCode
 production_url : http://simplecode.me
-description: Programming blog
 
 author: Alex Jackson
 twitter: alexjohnj
@@ -23,4 +22,4 @@ plugins:     ./_plugins
 future:      true
 lsi:         false
 pygments:    true
-markdown:    kramdown
+markdown:    rdiscount
