@@ -15,11 +15,11 @@ A small side note, unlike my usual tutorials, we won't be building a sample appl
 
 The first step to using Growl in your application is to import the framework into your program. This is quite simple. First, download the Growl SDK from the [Growl website](http://growl.info/downloads). Then, drag the *Growl.framework* folder into your Xcode project via Xcode. In the sheet that appears, ensure that “Copy items into destination group's folder...” is selected. Upon finishing, open up your products build phases and drag the *Growl.framework* item from the Xcode navigator to the copy files section of your build phases. Ensure that the destination is *Frameworks*. Here's a nice diagram to sum that up. 
 
-<img src="/images/posts/2012/04/usingGrowlInCocoa/growlFrameworkImport1.png"/>
+<img src="/images/posts/2012/04/usingGrowlInCocoa/growlFrameworkImport1.png" width="75%" alt="Step 1 of importing a framework to Xcode"/>
 
-<img src="/images/posts/2012/04/usingGrowlInCocoa/growlFrameworkImport2.png" />
+<img src="/images/posts/2012/04/usingGrowlInCocoa/growlFrameworkImport2.png" width="75%" alt="Step 2 of importing a framework to Xcode"/>
 
-<img src="/images/posts/2012/04/usingGrowlInCocoa/growlFrameworkImport3.png" />
+<img src="/images/posts/2012/04/usingGrowlInCocoa/growlFrameworkImport3.png" width="75%" alt="Step 3 of importing a framework to Xcode"/>
 
 ## 2. Create a Notification Dictionary
 

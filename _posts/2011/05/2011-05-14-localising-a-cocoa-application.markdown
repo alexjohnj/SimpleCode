@@ -29,11 +29,11 @@ The Example (In More Detail)
 
 As I said, we’re going to localise the sample application I provided into Spanish. The first thing, therefore, that you want to do is open the sample application and see what it does. When you build and run it, you should see some thing like this:
 
-![image](/images/posts/2011/05/localisingACocoaApplication/localiseme_main_window.png?w=139&h=194)
+![The main window of our example application.](/images/posts/2011/05/localisingACocoaApplication/localiseme_main_window.png?w=139&h=194)
 
 If you click on the button which says Push Me! you should see this:
 
-![image](/images/posts/2011/05/localisingACocoaApplication/localiseme_panel_view.png?w=437&h=163)
+![An alert that appears after pushing a button in our application.](/images/posts/2011/05/localisingACocoaApplication/localiseme_panel_view.png?w=437&h=163)
 
 Told you it was basic. It will soon become apparent though that localising this application presents a challenge. The panel’s content that appears when the button is pressed is controlled by code, not by a view. How do we localise code? All will be revealed shortly. For now lets focus on localising the main window.
 
@@ -44,7 +44,7 @@ The first thing you need to do is select the MainMenu.xib file and open up the f
 
 If you don’t see them, click on the small disclosure triangle next to MainMenu.xib. The two MainMenu.xib’s have either English or Spanish after their names. Open up the Spanish XIB and you’ll find an exact copy of the English MainMenu.xib. Edit the Spanish XIB file to look like this:
 
-![image](/images/posts/2011/05/localisingACocoaApplication/localised_xib_file.png?w=195&h=248)
+![The Spanish XIB for our application.](/images/posts/2011/05/localisingACocoaApplication/localised_xib_file.png?w=195&h=248)
 
 In a full-scale application, you’ll also need to translate the menu bar items but it isn’t necessary for this application.
 
@@ -63,7 +63,7 @@ String Tables
 
 Open up the new file dialogue for Xcode (⌘+N) and, under Mac OS X, choose resource and then Strings File.
 
-![image](/images/posts/2011/05/localisingACocoaApplication/creating_string_table.png?w=600&h=375)
+![Creating a strings file in Xcode.](/images/posts/2011/05/localisingACocoaApplication/creating_string_table.png?w=600&h=375)
 
 Click next and then name the string file Localizable (the .strings is automatically appended). Now, open the .strings file and edit it to look like this:
 

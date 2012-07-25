@@ -43,12 +43,12 @@ Open up *AppDelegate.m* and create a new `init:` method. Edit the method to look
 
 {% highlight objc %}
 -(id)init{
-self = [super init];
-if (self){
-	[[NSUserDefaults standardUserDefaults] setFloat:100 forKey:@"fontSize"];
-	[[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isBold"];
-}	
-return self;
+	self = [super init];
+	if (self){
+		[[NSUserDefaults standardUserDefaults] setFloat:100 forKey:@"fontSize"];
+		[[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isBold"];
+	}	
+	return self;
 }
 {% endhighlight %}
 

@@ -15,7 +15,7 @@ UINavigationController is  a class provided by Apple for managing multiple view
 
 Before we dive into a sample program we'll take a look at the basics of how a UINavigationController works. As mentioned above, a navigation controller manages a hierarchy of views. This hierarchy of views is represented on a stack. At the bottom of the stack is your root view. This is the initial view which is presented to the user. From the root view, subviews are pushed onto the stack, with the current view visible to the user being at the top of the stack. (Generally) All the views which are on the navigation controller's stack have an instance of a UINavigationBar, this thing:
 
-![image](/images/posts/2011/09/introductionToUINavigationController/uinavigationbarexample.png)
+![A UINavigationBar in iOS.](/images/posts/2011/09/introductionToUINavigationController/uinavigationbarexample.png)
 
 This is used to present a user interface to your users to navigate the navigation controllers stack. On all views except for the root view, the UINavigationBar will have a back button on the left hand side. The back button will have the title of the previous view in the stack. The right hand side of the navigation bar can house an additional button and it's possible to add a description to the navigation bar too by using some methods on the UINavigationBar. When navigating between views on the navigation stack, there are two methods you'll use frequently:
 
@@ -30,7 +30,7 @@ This is used to present a user interface to your users to navigate the navigatio
 
 The first method is used to push a view onto the stack and the second method is used to return to the previous view on the stack. The animated boolean simply checks to see if you want to see the slide transition used when moving between views. In 99% of cases, you want to pass YES/TRUE to this argument. You'll actually rarely call popViewController: manually since the back button on a UINavigationBar is set up to automatically call it for you so in most cases you'll only be pushing view controllers. Below is a simple diagram demonstrating the use of these two methods and a navigation controller:
 
-![image](/images/posts/2011/09/introductionToUINavigationController/viewheirarchyexample.jpg)
+![A diagram showing the methods called when views are pushed and poped from the navigation stack.](/images/posts/2011/09/introductionToUINavigationController/viewheirarchyexample.jpg)
 
 The concept of navigation controllers is relatively simple, and implementing them is really simple too. Here's a brief summary of what happens when setting up a navigation controller:
 
@@ -88,7 +88,7 @@ Here, we are initialising the instance of the navigation controller with the roo
 
 Now, if you build and run the app, you'll find that you get a blank screen with a navigation bar across the top. This means that your navigation controller is working, so now all that's really left is to build the UI and write a couple of line soy code. Open the _RootViewController.xib_ file and edit the UI to however you feel, just make sure you feature at least one button in the view in order to allow you to progress to the next view. One thing to note, when editing a view that has a navigation bar across the top, Interface Builder doesn't actually present the location of the navigation bar to you. As a result, you have to plan your UI with the location of the navigation bar in mind. Fortunately, Interface Builder provides a really easy way to do this, select your view and open up the attributes inspector. Under the collapsible menu entitled "Simulated Metrics" select the "Top Bar" drop down menu and choose "Navigation Bar". Now you have a navigation bar placed at the top of the view which allows you to lay out your view whilst taking the navigation bar into consideration.
 
-![image](/images/posts/2011/09/introductionToUINavigationController/enablingsimulatednavigationbar.png)
+![Simulating a navigtaion bar in Interface Builder.](/images/posts/2011/09/introductionToUINavigationController/enablingsimulatednavigationbar.png)
 
 Whilst you're in Interface Builder, you may as well go and design the other two views too. Again, on the second view, remember to include a button to progress to the third view (this isn't necessary on the third view). In addition, on the third view, include a blank label in the centre of the screen. This will come in handy later on. Once you've designed all three views, continue onwards.
 

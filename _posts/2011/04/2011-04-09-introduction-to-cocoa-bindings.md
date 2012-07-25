@@ -95,17 +95,17 @@ A quick run-through of the code shows that we’re creating a variable called `f
 
 The next step in our bindings example is to edit our _MainMenu.xib_ file. Create a UI similar to what I’ve done using a NSSlider and a label:
 
-![image](/images/posts/2011/04/introToBindingsAndKVC/screen-shot-2011-04-29-at-19-27-41.png)
+![The UI for our application featuring a label & a slider.](/images/posts/2011/04/introToBindingsAndKVC/screen-shot-2011-04-29-at-19-27-41.png)
 
 Under the attributes inspector, set the slider to continuous. 
 
 Now we are going to bind our user interface. Drag out a NSObject from the library in interface builder and set its class to AppController. Now, select the NSSlider and enter the bindings inspector for it (CMD+Alt+7). Expand the value menu and bind the the slider to AppController with a modal key path of foo like so:
 
-![image](/images/posts/2011/04/introToBindingsAndKVC/bindingfootolabel.png)
+![How to bind foo to a slider.](/images/posts/2011/04/introToBindingsAndKVC/bindingfootolabel.png)
 
 Likewise, select the label and edit its value binding to look the same (bound to AppController with a modal key path of foo). Now, go ahead and build and run your application and you should find that as you move the slider the label updates with the value of the slider. You should also find that when you start the application, the label is 50 and the slider is centred. You’ve just created an application using bindings in far fewer lines of code than it would have taken with bindings. When I say far fewer I really mean about 10 but still, imagine having multiple sliders and text fields, then that 10 lines could grow quickly into 100! Bindings are especially useful when creating NSTableVeiws as they normally require a particularly large amount of glue code in order to make them work but this can be eliminated with bindings. The difficulty level of this however far exceeds the expectations of this tutorial and so shan’t be discussed.
 
-![image](/images/posts/2011/04/introToBindingsAndKVC/screen-shot-2011-04-29-at-20-14-37.png) The finished application
+![The finished application showing the label changing as the slider moves.](/images/posts/2011/04/introToBindingsAndKVC/screen-shot-2011-04-29-at-20-14-37.png) The finished application
 
 What Have We Done?
 ------------------
