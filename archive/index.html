@@ -12,9 +12,7 @@ title: "Archive"
 {% if postYear != currentYear %}
 <h1>{{ postYear }}</h1>
 {% assign currentYear = postYear %}
-
-{% else %}
-<h3><a href="{{ post.url }}">{{ post.title }}</a><small> {{ post.date | date_to_string }}</small></h3> 
 {% endif %}
+<h3><a href="{{ post.url }}">{{ post.title }}</a><small> {{ post.date | date_to_string }}</small></h3> 
 
 {% endfor %}
