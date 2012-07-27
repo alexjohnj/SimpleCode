@@ -2,6 +2,7 @@
 layout: post
 title: "Open Source Project Announcements"
 categories: Announcements
+excerpt: "This is a small set of announcements regarding several of my open source projects. It doesn't have anything to do with the tutorials I write on this blog so if you don't follow my open source projects, feel free to skip this post."
 ---
 
 This is a small set of announcements regarding several of my open source projects. It doesn't have anything to do with the tutorials I write on this blog so if you don't follow my open source projects, feel free to skip this post. 

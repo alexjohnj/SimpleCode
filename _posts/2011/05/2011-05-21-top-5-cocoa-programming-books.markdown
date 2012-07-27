@@ -2,7 +2,8 @@
 layout: post
 title: "Top 5 Cocoa Programming Books"
 description: "Outlines the top 5 Cocoa programming books I used to learn to program in objective-c and cocoa." 
-keywords: "top 5, list, cocoa, programming, iOS, mac os x, development, learn" 
+keywords: "top 5, list, cocoa, programming, iOS, mac os x, development, learn"
+excerpt: "It’s now just over one year since I started my adventure into the world of Mac development (it’s actually a little longer but I wouldn’t call any work I did before that &quot;learning&quot;) and so far, it’s been a fun one. I finally feel ready to call my self a ‘decent’ programmer rather than a total novice. Throughout the past year, I’ve found several incredibly handy resources including websites, books, applications and people. In this post though, I want to talk about just one of those; Books."
 ---
 
 It’s now just over one year since I started my adventure into the world of Mac development (it’s actually a little longer but I wouldn’t call any work I did before that "learning") and so far, it’s been a fun one. I finally feel ready to call my self a ‘decent’ programmer rather than a total novice. Throughout the past year, I’ve found several incredibly handy resources including websites, books, applications and people. In this post though, I want to talk about just one of those; Books. 

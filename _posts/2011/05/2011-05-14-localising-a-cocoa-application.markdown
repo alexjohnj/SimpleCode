@@ -3,6 +3,7 @@ layout: post
 title: "Localising a Cocoa Application"
 description: "Localising a Cocoa application becomes incredibly important as your application becomes popular. Fortunately, Apple makes it easy to localise applications into other languages"
 keywords: "localise, localize, translate, cocoa, objective-c, cocoa touch, mac os x, iOS, spanish"
+excerpt: "If your Cocoa application suddenly becomes a hit overnight it’s going to become highly likely that there will be people using it that don’t speak the language you wrote it in. When this becomes the case you’ll want to translate (also known as localise) your application for as many different languages as you can. In this tutorial, we’re going to work through translating a very simple application into Spanish (don’t worry, I’ll provide the Spanish). Once you’ve followed through this tutorial, you should be able to apply the knowledge you gained to translate your own applications with relative ease!"
 ---
 If your Cocoa application suddenly becomes a hit overnight it’s going to become highly likely that there will be people using it that don’t speak the language you wrote it in. When this becomes the case you’ll want to translate (also known as localise) your application for as many different languages as you can. In this tutorial, we’re going to work through translating a very simple application into Spanish (don’t worry, I’ll provide the Spanish). Once you’ve followed through this tutorial, you should be able to apply the knowledge you gained to translate your own applications with relative ease!
 

@@ -3,6 +3,7 @@ layout: post
 title: "Tab Based iOS Apps - UITabBarController"
 description: "Outlines how to set up UITabBarController to manage a set of views using a tab based application."
 keywords: "cocoa, objective-c, cocoa touch, iOS, tab, tab based app, UITabBar, UITabItem, UITabBarController, UINavigationController"
+excerpt: "Several weeks ago, I showed you how to use UINavigationController to create an iOS application that manages multiple screens of hierarchical data. UINavigationController was very easy to use and intuitive when it came to managing multiple screens of data that branched off of each other like a tree. Sometimes however, you may need to display screens of data which don't actually link together in a metaphorical tree. To do this, you can use the UITabBarController class a, again, very simple and intuitive class for managing multiple views using a tab bar."
 ---
 
 Several weeks ago, I showed you how to use UINavigationController to create an iOS application that manages multiple screens of hierarchical data. UINavigationController was very easy to use and intuitive when it came to managing multiple screens of data that branched off of each other like a tree. Sometimes however, you may need to display screens of data which don't actually link together in a metaphorical tree. To do this, you can use the UITabBarController class a, again, very simple and intuitive class for managing multiple views using a tab bar. 

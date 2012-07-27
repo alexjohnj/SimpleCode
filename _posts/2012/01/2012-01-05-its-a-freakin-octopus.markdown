@@ -4,9 +4,8 @@ title: "It's a Freakin' Octopus!"
 published: true
 description: "This blog is now powered by Octopress & hosted on Heroku! No more Wordpress!"
 keywords: "octopress, wordpress, comments, heroku, static, baked, website, update"
+excerpt: "If you're seeing this page then the conversion of SimpleCode from a Wordpress.com blog to a Heroku hosted, Octopress based blog has been a success! Regular readers will note that things look a <del>little</del> lot different. I've converted the blog to a Octopress blog, meaning it's now a static blog making it faster and, in my opinion, easier to manage. [Octopress](http://octopress.org) is a static blogging framework “designed for hackers”. Essentially, you write blog posts in Markdown (which is really easy to [learn](/2011/12/11/getting-started-with-markdown/)), run them through a generator which churns out a folder containing all the posts in HTML format, some Javascript & some styling. The folder can be pushed to virtually any server and then it's accessible on the web. Simple."
 ---
-
-## The Octopus' Garden
 
 If you're seeing this page then the conversion of SimpleCode from a Wordpress.com blog to a Heroku hosted, Octopress based blog has been a success! Regular readers will note that things look a <del>little</del> lot different. I've converted the blog to a Octopress blog, meaning it's now a static blog making it faster and, in my opinion, easier to manage. [Octopress](http://octopress.org) is a static blogging framework “designed for hackers”. Essentially, you write blog posts in Markdown (which is really easy to [learn](/2011/12/11/getting-started-with-markdown/)), run them through a generator which churns out a folder containing all the posts in HTML format, some Javascript & some styling. The folder can be pushed to virtually any server and then it's accessible on the web. Simple.
 

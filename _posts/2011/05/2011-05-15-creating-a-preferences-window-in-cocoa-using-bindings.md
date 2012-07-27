@@ -3,6 +3,7 @@ layout: post
 title: "A Cocoa Bindings Example: Creating A Preferences Window"
 description: "Outlining a pratical use of bindings by creating a simple, reusable, preferences window" 
 keywords: "cocoa, bindings, KVC, key value coding, preferences, preferences window, mac os x, NSUserDefaults, NSUserDefaultsController"
+excerpt: "A few weeks ago, I wrote a post introducing you to the basics of bindings. In it, I was keen to stress how useful bindings are yet the example used was pretty pathetic with little practical use. In this tutorial however, you'll create a useful application which has applications in 90% of cocoa applications. I'm going to show you how to create a preferences window that uses bindings to handle saving the users preferences and altering the UI of the application according to said preferences."
 ---
 
 A few weeks ago, I wrote a post introducing you to the basics of bindings. In it, I was keen to stress how useful bindings are yet the example used was pretty pathetic with little practical use. In this tutorial however, you'll create a useful application which has applications in 90% of cocoa applications. I'm going to show you how to create a preferences window that uses bindings to handle saving the users preferences and altering the UI of the application according to said preferences. 

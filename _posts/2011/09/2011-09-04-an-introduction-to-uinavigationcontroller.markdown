@@ -3,6 +3,7 @@ layout: post
 title: "An Introduction To UINavigationController"
 description: "Outlines how to use UINavigationController to manage a hierarchy of views in an iOS application."
 keywords: "objective-c, cocoa touch, UINavigationController, UIViewController, UIView, iOS, multi-view app"
+excerpt: "UINavigationController is  a class provided by Apple for managing multiple views of data in a hierarchy. I can guarantee that if you have used iOS you have used a navigation controller. It wouldn't be unfair to say that 90% of applications on iOS make use of a navigation controller at some stage. The reason is simple, navigation controllers are crazy easy to use and crazy powerful in terms of functionality. They're also really easy for your users to understand too since they're a common system UI element."
 ---
 
 UINavigationController is  a class provided by Apple for managing multiple views of data in a hierarchy. I can guarantee that if you have used iOS you have used a navigation controller. It wouldn't be unfair to say that 90% of applications on iOS make use of a navigation controller at some stage. The reason is simple, navigation controllers are crazy easy to use and crazy powerful in terms of functionality. They're also really easy for your users to understand too since they're a common system UI element.

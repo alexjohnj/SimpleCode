@@ -3,6 +3,7 @@ layout: post
 title: "WTF is a #Pragma Mark?"
 description: "Outlines what a #pragma mark is and how to use them in Xcode projects"
 keywords: "xcode, IDE, pragma mark, mark, pragma"
+excerpt: "When browsing through another developers source code you may have come across something in the source code that looks like this: `#pragma mark someText`. After seeing these you may have been somewhat confused as to what they do in the application. To be honest, they don’t do anything in the application. Rather, pragma marks are there as another way to help organise your source code and make it easier to read. In Xcode, pragma marks are used as a way to manage the list of methods (the class outline) that can be bought up to faster navigate your source code. This list:"
 ---
 
 When browsing through another developers source code you may have come across something in the source code that looks like this: `#pragma mark someText`. After seeing these you may have been somewhat confused as to what they do in the application. To be honest, they don’t do anything in the application. Rather, pragma marks are there as another way to help organise your source code and make it easier to read. In Xcode, pragma marks are used as a way to manage the list of methods (the class outline) that can be bought up to faster navigate your source code. This list:

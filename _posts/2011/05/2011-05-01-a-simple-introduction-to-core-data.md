@@ -3,6 +3,7 @@ layout: post
 title: "A Simple Introduction to Core Data"
 description: "Core Data is a brilliant feature of Cocoa that makes managing persistent data easy. This post is a simple introduction to using the Core Data framework" 
 keywords: "core data, cocoa, cocoa touch, objective-c, programming, simple"
+excerpt: "Core data is _the_ feature of Cocoa that makes it the best tool for developing applications for the macintosh. It’s what makes Cocoa a better choice for developing full, feature rich applications than Java or Ruby (not that they’re bad languages) for the mac. The simple reason for this is it allows you to develop amazingly complicated applications in precisely **0** lines of code. Even then, you can add in your own code to make brilliantly complicated applications in far less code and time than it would take by writing them without core data. Core data is awesome. There’s no other word for it."
 ---
 
 *Having problems with this tutorial? The source code for the example in this post is available [here](https://github.com/alexjohnj/simplecode-sample-source/tree/master/2011/05/A%20Simple%20Introduction%20to%20Core%20Data)*
