@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /blog/
+Disallow: /tag/
+Sitemap: http://simplecode.me/sitemap.xml
