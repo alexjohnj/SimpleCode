@@ -2,6 +2,15 @@ h1 {
   font-size: 2em;
 }
 
+pre {
+  white-space: pre;
+  overflow: auto;
+  word-wrap: normal;
+  code {
+    white-space: pre;  
+  }
+}
+
 .sidebar-span {
   padding-top: 20px;
   @media handheld, only screen and (max-width: 767px) {
