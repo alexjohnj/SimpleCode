@@ -1,0 +1,30 @@
+h1 {
+  font-size: 2em;
+}
+
+.sidebar-span {
+  padding-top: 20px;
+  @media handheld, only screen and (max-width: 767px) {
+    padding-top: 0px;
+  }
+}
+
+.page-header {
+  h1 {
+    line-height: 1em;
+    small {
+      line-height: inherit;
+      font-size: 0.6em;
+    }
+    a {
+      color: inherit;
+    }
+    @media handheld, only screen and (max-width: 640px) {
+      line-height: 1.1em;
+    }
+  }
+}
+
+a:hover {
+  text-decoration: none;
+}

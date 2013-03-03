@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
+		<meta charset="utf-8">
 		{% if page.title %}<title>{{ page.title }} · {{ site.title }}</title>
 		{% else %}<title>{{ site.title }}</title>{% endif %}
-		<link rel="stylesheet" type="text/css" href="/styles/css/bootstrap.css" />
-		<link rel="stylesheet" type="text/css" href="/styles/css/pygments.css" />
-		<link rel="stylesheet" type="text/css" href="/styles/css/custom.css" />
+		<link rel="stylesheet" type="text/css" href="/styles/css/styles.css" />
 		<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed" />
 		
 		{% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
@@ -15,36 +13,41 @@
 		{% elsif page.author == null %}
 		<meta name="author" content="{{ site.author }}">
 		{% endif %}
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-28094708-1"]),_gaq.push(["_trackPageview"]),function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script>
 	</head>
 	<body>
-		<div class="navbar">
+		<div class="navbar navbar-static-top">
 		  <div class="navbar-inner">
-			<div class="container">
-			  <a class="brand" href="/">SimpleCode</a>
-			  <ul class="nav">
-			  	<li><a href="/">Home</a></li>
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+
+			<a class="brand" href="/">SimpleCode</a>		
+			<div class="nav-collapse collapse">
+				<ul class="nav">
+					<li><a href="/">Home</a></li>
 				<li><a href="/projects/">Projects</a></li>
-				<li><a href="/archive">Archive</a></li>
-			  </ul>
+				<li><a href="/archive/">Archive</a></li>
+				</ul>
 			</div>
 		  </div>
-		</div>
-		
+		</div><!--end navbar-->
+
 		<div class="container-fluid">
-		  <div class="row-fluid">
-			<div class="span10">
-			  {{ content }}
+			<div class="row-fluid">
+				<div class="span10">
+					{{ content }}
+				</div>
+				<div class="span2 sidebar-span">
+					<div class="well">{% include githubrepo.html %}</div>
+					<div class="well">{% include socialLinks.html %}</div>
+				</div>
 			</div>
-			<div class="span2">
-				<div class="well">
-			  {% include githubrepo.html %}
-		  </div>
-		  <div class="well">
-		  	{% include socialLinks.html %}
-	 	 </div>
-			</div>
-		  </div>
-		</div>
+		</div><!--end container-->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
 	</body>
 </html>
