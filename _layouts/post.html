@@ -11,13 +11,14 @@ layout: default
 	{{ content }}
 </article>
 <hr/>
-<div id="pageNavigation">
+<div class="row-fluid">
 	<h4>
 		More on SimpleCode:
 	</h4>
-	<p>
-		{% if page.previous.url %}<a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>{% endif %}
-		{% if page.previous.url and page.next.url %}||{% endif %}
-		{% if page.next.url %}<a href="{{ page.next.url }}">{{ page.next.title }} →</a>{% endif %}
-	</p>
+	<div id="previous-post-box" class="span6">
+		{% if page.previous.url %} <p><a href="{{ page.previous.url }}"> &laquo; {{ page.previous.title }} </a> </p>{% endif %} 
+	</div>
+	<div id="next-post-box" class="span5"><!--Yeah, I know this should be span6 so that the row adds up to 12 but if I do that, the div gets pushed down and I can't work out why-->
+		{% if page.next.url %} <p><a href="{{ page.next.url }}"> {{ page.next.title }} &raquo;</a> </p>{% endif %}
+	</div>
 </div>

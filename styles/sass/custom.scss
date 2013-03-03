@@ -37,3 +37,29 @@ pre {
 a:hover {
   text-decoration: none;
 }
+
+#more-posts-box {
+  padding-bottom: 30px;
+  width :100%;
+
+  p {
+    margin-top: 7px;
+    margin-bottom: 7px;
+  }
+
+  h4 {
+    margin-top: 7px;
+    margin-bottom: 2px;
+  }
+}
+
+#previous-post-box {
+  text-align: left;
+}
+
+#next-post-box {
+  text-align: right;
+  @media handheld, only screen and (max-width: 640px) {
+    text-align: left;
+  }
+}
