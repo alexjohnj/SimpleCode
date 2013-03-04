@@ -18,6 +18,20 @@ pre {
   }
 }
 
+#book-recommendations{
+  text-align: center;
+  div.book {
+    padding: 20px 20px 0px 0px;
+    display: inline-block;
+    width: 160px;
+    vertical-align: top;
+
+    img {
+      padding-bottom: 10px;
+    }
+  }  
+}
+
 .page-header {
   h1 {
     line-height: 1em;
