@@ -26,8 +26,9 @@ pre {
     width: 160px;
     vertical-align: top;
 
-    img {
+    div.book-cover {
       padding-bottom: 10px;
+      display: inline-block;
     }
   }  
 }
