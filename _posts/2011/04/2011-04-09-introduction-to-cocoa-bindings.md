@@ -92,7 +92,7 @@ Now open _AppController.m_ and edit it to look like this:
 @end
 {% endhighlight %}
 
-A quick run-through of the code shows that we’re creating a variable called `foo`, creating synthesised accessor methods for it and then in the `init` method we’re setting the value to be 50 using KVC. Note that instead of creating the synthesised accessor methods we could have written our own getter & setter methods however they must be written as follows: `(float)foo` and `(void)setfoo:(float)x`. If you’ve created your own variable then it must follow that naming patter for your getter & setter methods or else the KVC and therefore bindings for that value won’t work.
+A quick run-through of the code shows that we’re creating a variable called `foo`, creating synthesised accessor methods for it and then in the `init` method we’re setting the value to be 50 using KVC. Note that instead of creating the synthesised accessor methods we could have written our own getter & setter methods however they must be written as follows: `(float)foo` and `(void)setfoo:(float)x`. If you’ve created your own variable then it must follow that naming pattern for your getter & setter methods or else the KVC and therefore bindings for that value won’t work.
 
 The next step in our bindings example is to edit our _MainMenu.xib_ file. Create a UI similar to what I’ve done using a NSSlider and a label:
 
@@ -123,7 +123,7 @@ Disadvantages Of Bindings
 
 By now you're hopefully thinking that bindings are the best things since sliced bread (if not, please let me know why) however they do have a few small disadvantages. The first would be that Cocoa bindings is such a far-reaching and deep topic it will take you a long time to learn how to use bindings in more useful situations than the one featured. It will probably be frustrating but the end result will be that you’re a better programmer and you can create better, more complex applications easily. Put the time aside and practice, you’ll learn new things as you experiment.
 
-The other, more serious problem would be that using bindings introduces a, albeit small, overhead on your applications. It can slow down your applications and will use slightly more memory than writing out all of that glue code. The impact is minimal but it’s important to way up the opportunity cost of using bindings in more complex projects. If you are using lots of bindings, you’re going to have a large overhead. Would it not be easier to perhaps remove some of them to improve performance slightly? Or would this require lots of glue code that could increase the cost of development a lot. This is something you will have to consider when making use of bindings.
+The other, more serious problem would be that using bindings introduces a, albeit small, overhead on your applications. It can slow down your applications and will use slightly more memory than writing out all of that glue code. The impact is minimal but it’s important to weigh up the opportunity cost of using bindings in more complex projects. If you are using lots of bindings, you’re going to have a large overhead. Would it not be easier to perhaps remove some of them to improve performance slightly? Or would this require lots of glue code that could increase the cost of development? This is something you will have to consider when making use of bindings.
 
 Further Reading
 ---------------
