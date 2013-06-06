@@ -6,13 +6,9 @@ twitter: alexjohnj
 github: alexjohnj
 
 paginate: 5
-
 permalink:   /:year/:month/:day/:title/
-
 safe:        false
-auto:        true
-server:      false
-server_port: 4000
+port: 4000
 baseurl:    /
 
 source:      .
