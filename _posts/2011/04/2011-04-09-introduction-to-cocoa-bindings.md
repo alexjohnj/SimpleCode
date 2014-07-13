@@ -134,7 +134,7 @@ Another good source would be [this article](http://cocoadevcentral.com/articles/
 
 The final source I recommend is a fantastic book by Aaron Hillegass, Cocoa Programming For Mac OS X. Not only is it THE definitive book on Cocoa Programming but one of the main projects in the book makes extensive usage of bindings. Be sure to pick up the [3rd edition](http://www.amazon.co.uk/Cocoa-Programming-Mac-OS-X/dp/0321503619/ref=sr_1_1?ie=UTF8&qid=1304104154&sr=8-1) (or [2nd](http://www.amazon.co.uk/Cocoa-Programming-OS-Aaron-Hillegass/dp/0321213149/ref=sr_1_1?ie=UTF8&s=books&qid=1304104161&sr=8-1) if you feeling cheap like me) as the first edition was written before bindings was introduced (and therefore has no information on them).
 
-***Update 15/5/11*** Another resource I’d recommend is one I just wrote. [A Cocoa Bindings Example: Creating A Preferences Window](/2011/05/15/creating-a-preferences-window-in-cocoa-using-bindings/) walks you through the basics of applying the use of bindings by creating a fully functioning preferences window in under 50 lines of code using bindings.
+***Update 15/5/11*** Another resource I’d recommend is one I just wrote. [A Cocoa Bindings Example: Creating A Preferences Window]({{ site.baseurl }}/2011/05/15/creating-a-preferences-window-in-cocoa-using-bindings/) walks you through the basics of applying the use of bindings by creating a fully functioning preferences window in under 50 lines of code using bindings.
 
 Hopefully this post (and the links above) have been helpful for you and, as always, happy coding!
 

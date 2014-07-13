@@ -12,7 +12,7 @@ One of the most frequently used controls in Cocoa applications (next to NSButton
 
 ## Background
 
-Contrary to popular belief, bindings is **not** an easy topic for new Cocoa developers. Whilst it greatly simplifies development, it's still critical that you have a decent understanding of many of the fundamentals of Cocoa and Objective C. If you need something of a primer on bindings, check out my previous posts [An Introduction to Bindings & KVC](/2011/04/09/introduction-to-cocoa-bindings/) and [A Cocoa Bindings Example: Creating a Preferences Window](/2011/05/15/creating-a-preferences-window-in-cocoa-using-bindings/). Assuming you have an understanding of the basics of bindings, and also understand a respectable amount of Objective C, let's begin.
+Contrary to popular belief, bindings is **not** an easy topic for new Cocoa developers. Whilst it greatly simplifies development, it's still critical that you have a decent understanding of many of the fundamentals of Cocoa and Objective C. If you need something of a primer on bindings, check out my previous posts [An Introduction to Bindings & KVC]({{ site.baseurl }}/2011/04/09/introduction-to-cocoa-bindings/) and [A Cocoa Bindings Example: Creating a Preferences Window]({{ site.baseurl }}/2011/05/15/creating-a-preferences-window-in-cocoa-using-bindings/). Assuming you have an understanding of the basics of bindings, and also understand a respectable amount of Objective C, let's begin.
 
 ## The Example
 
