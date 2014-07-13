@@ -16,9 +16,9 @@ layout: default
 		More on SimpleCode:
 	</h4>
 	<div id="previous-post-box" class="span6">
-		{% if page.previous.url %} <p><a href="{{ page.previous.url }}"> &laquo; {{ page.previous.title }} </a> </p>{% endif %} 
+		{% if page.previous.url %} <p><a href="{{ site.baseurl }}{{ page.previous.url }}"> &laquo; {{ page.previous.title }} </a> </p>{% endif %} 
 	</div>
 	<div id="next-post-box" class="span5"><!--Yeah, I know this should be span6 so that the row adds up to 12 but if I do that, the div gets pushed down and I can't work out why-->
-		{% if page.next.url %} <p><a href="{{ page.next.url }}"> {{ page.next.title }} &raquo;</a> </p>{% endif %}
+		{% if page.next.url %} <p><a href="{{ site.baseurl }}{{ page.next.url }}"> {{ page.next.title }} &raquo;</a> </p>{% endif %}
 	</div>
 </div>

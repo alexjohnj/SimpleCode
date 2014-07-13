@@ -4,8 +4,8 @@
 		<meta charset="utf-8">
 		{% if page.title %}<title>{{ page.title }} · {{ site.title }}</title>
 		{% else %}<title>{{ site.title }}</title>{% endif %}
-		<link rel="stylesheet" type="text/css" href="/styles/css/styles.css" />
-		<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed" />
+		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/styles/css/styles.css" />
+		<link href="{{ site.baseurl }}/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed" />
 		
 		{% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
 		{% if page.author %}
@@ -25,12 +25,12 @@
 				<span class="icon-bar"></span>
 			</a>
 
-			<a class="brand" href="/">SimpleCode</a>		
+			<a class="brand" href="{{ site.baseurl }}/">SimpleCode</a>		
 			<div class="nav-collapse collapse">
 				<ul class="nav">
-					<li><a href="/">Home</a></li>
-				<li><a href="/projects/">Projects</a></li>
-				<li><a href="/archive/">Archive</a></li>
+					<li><a href="{{ site.baseurl }}/">Home</a></li>
+				<li><a href="{{ site.baseurl }}/projects/">Projects</a></li>
+				<li><a href="{{ site.baseurl }}/archive/">Archive</a></li>
 				</ul>
 			</div>
 		  </div>
@@ -49,6 +49,6 @@
 			<div class="well" id="book-recommendations">{% include ad.html %}</div>
 		</div><!--end container-->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script src="/js/bootstrap.min.js"></script>
+		<script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
 	</body>
 </html>

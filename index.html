@@ -4,18 +4,18 @@ layout: default
 
 {% for post in paginator.posts %}
 <div class="page-header">
-	<h1><a href="{{ post.url }}">{{ post.title }}</a><small> {{ post.date | date_to_long_string }}</small></h1>
+	<h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><small> {{ post.date | date_to_long_string }}</small></h1>
 	{{ post.excerpt | markdownify }}
-	<a href="{{ post.url }}">Read more...</a>
+	<a href="{{ site.baseurl }}{{ post.url }}">Read more...</a>
 </div>
 {% endfor %}
 
 <div class="pagination">
 	<ul>
-	{% if paginator.next_page %}<li><a href="/page{{ paginator.next_page }}">Older Posts</a></li>{% endif %}
+	{% if paginator.next_page %}<li><a href="{{ site.baseurl }}/page{{ paginator.next_page }}/">Older Posts</a></li>{% endif %}
 	{% if paginator.previous_page %}
-	{% if paginator.previous_page == 1 %}<li><a href="/">Newer Posts</li></a>
-	{% else %}<li><a href="/page{{ paginator.previous_page }}">Newer Posts</a></li>{% endif %}
+	{% if paginator.previous_page == 1 %}<li><a href="{{ site.baseurl }}/">Newer Posts</li></a>
+	{% else %}<li><a href="{{ site.baseurl }}/page{{ paginator.previous_page }}/">Newer Posts</a></li>{% endif %}
 	{% endif %}
 	</ul>
 </div>

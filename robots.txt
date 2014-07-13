@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /blog/
 Disallow: /tag/
-Sitemap: http://simplecode.me/sitemap.xml
+Sitemap: http://alexjohnj.github.com/simplecode/sitemap.xml
