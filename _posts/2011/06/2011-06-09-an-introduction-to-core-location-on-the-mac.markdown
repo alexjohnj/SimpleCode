@@ -20,7 +20,7 @@ Creation
 
 Create a new Cocoa application (non document based and sans core data) and give it a name. The first thing we need to do is add the Core Location framework. If you’ve never added a framework before it’s relatively simple. In the project navigator, select your project (right at the top of the list) and then choose the application target. You’ll get some information on your application target and you can set the icon etc here. Choose the summary tab and under “Linked Frameworks and Libraries” click the plus button. In the sheet that appears, search for Location and add the CoreLocation.framework. Make sure it is set to required. Below is a diagram outlining the steps to add a framework:
 
-![Adding a framework in Xcode.](/images/posts/2011/06/anIntroductionToCoreLocationOnTheMac/adding_core_location_framework.png?w=600&h=375)
+![Adding a framework in Xcode.]({{ site.baseurl }}/images/posts/2011/06/anIntroductionToCoreLocationOnTheMac/adding_core_location_framework.png?w=600&h=375)
 
 Once we’ve added the framework, we can create the UI. Add a single multi-line label to the main window and resize it to fit the window (or the window to fit it). That’s it.
 

@@ -15,7 +15,7 @@ Core data is _the_ feature of Cocoa that makes it the best tool for developing a
 
 This tutorial is going to walk you through creating a useful, real world application in core data. We’re going to create a book manager, that allows you to keep a record of all the books you own. It _should_ end up looking something like this:
 
-![The application we're going to make.](/images/posts/2011/05/aSimpleCoreDataIntroduction/screen-shot-2011-05-01-at-17-18-28.png)
+![The application we're going to make.]({{ site.baseurl }}/images/posts/2011/05/aSimpleCoreDataIntroduction/screen-shot-2011-05-01-at-17-18-28.png)
 
 Horrible user interface aside it will have the following features:
 
@@ -56,15 +56,15 @@ Go ahead and add these attributes. Once we’ve created the entity, we need to b
 
 Once the UI has been created we need to set up an ArrayController. Drag an ArrayController out of the objects library. Open the attributes inspector and change the object controller mode to Entity. Then, for the entity name, enter Book. Finally, check the box prepares content. It should look like the below image:
 
-![Preparing an instance of NSArrayController.](/images/posts/2011/05/aSimpleCoreDataIntroduction/setting-nsarraycontroller-entity.png)
+![Preparing an instance of NSArrayController.]({{ site.baseurl }}/images/posts/2011/05/aSimpleCoreDataIntroduction/setting-nsarraycontroller-entity.png)
 
 Now, open the bindings inspector for the array controller and bind the managed object context to the App Delegate. Furthermore, set the model key path to managedObjectContext (For more information on bindings see this post). The bindings inspector for the array controller should look like this:
 
-![Binding a Core Data managed object context to an array controller.](/images/posts/2011/05/aSimpleCoreDataIntroduction/nsarraycontroller-bindings.png)
+![Binding a Core Data managed object context to an array controller.]({{ site.baseurl }}/images/posts/2011/05/aSimpleCoreDataIntroduction/nsarraycontroller-bindings.png)
 
 Now that we’ve set up the array controller, it’s time to bind the user interface. This is incredibly simple to do. First we need to bind the first column of the table to the title attribute. Select the first column and open up the bindings inspector. Bind the value of the first column to the Array Controller and set the model key path to title as below:
 
-![Binding the first comlumn of a table to an instance of NSArrayController.](/images/posts/2011/05/aSimpleCoreDataIntroduction/binding-value-to-array-controller.png)
+![Binding the first comlumn of a table to an instance of NSArrayController.]({{ site.baseurl }}/images/posts/2011/05/aSimpleCoreDataIntroduction/binding-value-to-array-controller.png)
 
 Repeat for the following entities:
 
@@ -80,7 +80,7 @@ Repeat for the following entities:
 
 Next we need to connect the buttons so that they add and remove entries. Control drag from the add button to the Array Controller and choose the option add:. Likewise, control drag from the remove button and choose remove:. Furthermore, whilst having the remove button selected, open the bindings inspector and bind the enabled option to the array controller. Also, set the controller key to canRemove, as below:
 
-![Binding the remove button so that it is only enabled when a book is selected.](/images/posts/2011/05/aSimpleCoreDataIntroduction/binding-remove-enabled-to-array-controller.png)
+![Binding the remove button so that it is only enabled when a book is selected.]({{ site.baseurl }}/images/posts/2011/05/aSimpleCoreDataIntroduction/binding-remove-enabled-to-array-controller.png)
 
 Now, build and run the application. You’ll find that everything works, you can add & remove entries, drag and drop images to them & rate books. Furthermore, if you quit and reload the application, you’ll find that the data is saved and reloaded automatically. Pretty awesome! Despite the fact that you’ve written absolutely no code, you have a fully functioning cocoa app!
 

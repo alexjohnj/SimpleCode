@@ -277,9 +277,9 @@ In order to convert any markdown you write to HTML you need to do one of three t
 
 The selection of web apps available is somewhat limited. There's the previously mentioned [*Dingus*](http://daringfireball.net/projects/markdown/dingus) created by John Gruber. It will allow you to preview the output of your markdown and copy and paste the HTML code and that's about it. You *could* write out your markdown document in Dingus but you won't be able to save it so Dingus is more suited to experimenting with Markdown. An alternative web application is [*Dillinger*](http://dillinger.io/). Dillinger is a beautiful HTML5 web application which does support (offline) saving and features a much nicer user interface than Dingus. It allows you to export the HTML or the markdown to your computer and also integrates with GitHub. It doesn't have anywhere near as many features as a native application but if you *must* use a web app, Dillinger is probably your best bet. 
 
-<img src="/images/posts/2011/12/gettingStartedWithMarkdown/dingusScreenShot.png" width="640px" alt="Dingus" /> Dingus
+<img src="{{ site.baseurl }}/images/posts/2011/12/gettingStartedWithMarkdown/dingusScreenShot.png" width="640px" alt="Dingus" /> Dingus
 
-<img src="/images/posts/2011/12/gettingStartedWithMarkdown/dillingerScreenshot.png" width="640px" alt="Dillinger" /> Dillinger
+<img src="{{ site.baseurl }}/images/posts/2011/12/gettingStartedWithMarkdown/dillingerScreenshot.png" width="640px" alt="Dillinger" /> Dillinger
 
 ### Native Applications
 
@@ -293,19 +293,19 @@ Since all a markdown file is, is a plaintext file using a special syntax, any pl
 
 Mou is a relative newcomer to the world of markdown editors but it's already absolutely fantastic. Mou is currently in beta but it boasts an impressive selection of features and is my favourite markdown editor by far. Its brilliance lies in its simplicity. In full screen mode, the only thing visible is a word counter allowing you to focus on your writing. The application includes a split screen live preview, so you can see how the content will look on your website as you write and the application includes a collection of handy “actions” which essentially means I didn't have to teach you all of that syntax, because Mou's actions will handle the syntax for you. Options for exporting your markdown text in Mou is somewhat limited however. Mou allows you to export your document as a HTML file or, alternatively, you can copy the HTML into a HTML file. Mou is an exceptional application nonetheless. Whilst it's currently free, the developer seems to be planning to make the stable version shareware, which isn't a bad thing, [he deserves some credit](http://mouapp.com/donate/) for this great application. 
 
-<img src="/images/posts/2011/12/gettingStartedWithMarkdown/mouScreenShot.png" width="640px" alt="Mou"/> [Mou](http://mouapp.com/)
+<img src="{{ site.baseurl }}/images/posts/2011/12/gettingStartedWithMarkdown/mouScreenShot.png" width="640px" alt="Mou"/> [Mou](http://mouapp.com/)
 
 #### [Byword](http://bywordapp.com/) (Mac OS X | $9.99/£6.99)
 
 Byword is a minimalistic text editor for Mac OS X that integrates nicely with markdown. Whilst the application is also a rich text editor, it works very nicely with Markdown. The minimalist nature of the application allows you to concentrate on your writing and, again, the application includes a set of actions so you don't need to know the markdown syntax in that much detail. Unlike most applications, Byword doesn't include a live preview of your markdown document, instead you have to click a button to see a preview. This isn't necessarily a bad thing, it helps reduce distractions. Byword allows you to export your markdown files in a variety of formats including HTML, PDF, Word .doc and LaTeX. Alternatively, you can get Byword to copy the HTML output to your clipboard, where you can then paste it into a HTML file. Byword is a very good writing application and markdown editor and, whilst it isn't cheap (or expensive), it's definitely worth the money if you're after a minimalistic editor. 
 
-<img src="/images/posts/2011/12/gettingStartedWithMarkdown/bywordScreenshot.png" width="640px" alt="Byword"/> [Byword](http://bywordapp.com/)
+<img src="{{ site.baseurl }}/images/posts/2011/12/gettingStartedWithMarkdown/bywordScreenshot.png" width="640px" alt="Byword"/> [Byword](http://bywordapp.com/)
 
 #### [MarkdownPad](http://markdownpad.com/) (Windows | Free)
 
 MarkdownPad is basically Mou for Windows. MarkdownPad includes a split pane live preview of your markdown files, numerous actions to simplify your writing and a HTML export feature. It also includes a distraction free mode and is customisable with custom themes and custom CSS for your previews. It's very powerful but also very simple and the best part is it's free! 
 
-<image src="/images/posts/2011/12/gettingStartedWithMarkdown/markdownPad.PNG" width="640px" alt="MarkdownPad"/> [MarkdownPad](http://markdownpad.com/)
+<image src="{{ site.baseurl }}/images/posts/2011/12/gettingStartedWithMarkdown/markdownPad.PNG" width="640px" alt="MarkdownPad"/> [MarkdownPad](http://markdownpad.com/)
 
 #### [ReText](http://sourceforge.net/p/retext/home/ReText/) (Linux | Free)
 

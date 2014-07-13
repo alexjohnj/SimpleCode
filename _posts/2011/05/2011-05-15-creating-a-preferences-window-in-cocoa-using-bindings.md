@@ -18,13 +18,13 @@ If you haven't already, reading my [previous](/2011/04/09/introduction-to-cocoa-
 
 Create a new, non-document based Cocoa project, without Core Data and name it whatever you want. Open up the *MainMenu.xib* file and add a multi-line label to the main window. Resize it so it fills the entire window. Next, create a new Objective-C class (that's a subclass of NSObject) and name it AppController. Then create another new Objective-C class, this time making it a subclass of NSWindowController. Name it *PreferencesController*. Finally, create a new window file and name it *Preferences*
 
-<img title="creating_window_xib.png" src="/images/posts/2011/05/aCocoaBindingsExampleCreatingAPreferencesWindow/creating_window_xib.png" alt="Creating window xib"/> Creating a Window file.
+<img title="creating_window_xib.png" src="{{ site.baseurl }}/images/posts/2011/05/aCocoaBindingsExampleCreatingAPreferencesWindow/creating_window_xib.png" alt="Creating window xib"/> Creating a Window file.
 
 ## Create The Preferences UI
 
 We now need to create a user interface for our preferences window. Open *Preferences.xib* and drag out two check boxes, a NSLabel and a NSSlider. Resize the window so that it fits the user interface controls. The window should end up looking like this:
 
-<img title="preferences_ui.png" src="/images/posts/2011/05/aCocoaBindingsExampleCreatingAPreferencesWindow/preferences_ui.png" alt="The Preferences Window"  />
+<img title="preferences_ui.png" src="{{ site.baseurl }}/images/posts/2011/05/aCocoaBindingsExampleCreatingAPreferencesWindow/preferences_ui.png" alt="The Preferences Window"  />
 
 Open the attributes inspector for the NSSlider and set the slider to “continuous”. Still in the attributes inspector, set the minimum value of the slider to 1 and the maximum value to 100. We now need to configure *Preferences.xib* so that it recognises the *PreferencesController* class as its owner. Keeping the *Preferences.xib* file open, select the nib's “Files Owner” instance and, under the identity inspector, set the custom class for Files Owner to *PreferencesController*. Now, control drag from the Files Owner instance to the preferences window and choose the window outlet. *Preferences.xib* now knows that *PreferencesController* is its owner and *PreferencesController* now knows what the window it needs to load is. 
 

@@ -13,6 +13,6 @@ title: "Archive"
 <h1>{{ postYear }}</h1>
 {% assign currentYear = postYear %}
 {% endif %}
-<h3><a href="{{ post.url }}">{{ post.title }}</a><small> {{ post.date | date_to_string }}</small></h3> 
+<h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><small> {{ post.date | date_to_string }}</small></h3> 
 
 {% endfor %}

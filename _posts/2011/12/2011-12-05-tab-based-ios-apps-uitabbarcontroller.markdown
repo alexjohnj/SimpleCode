@@ -16,7 +16,7 @@ At its simplest level, UITabBarController is a specialised view controller that 
 
 Consider the YouTube app included on all iOS devices:
 
-<img src="/images/posts/2011/12/introductionToUITabBarController/youtubeappdemoscreen.png" width="50%" alt="The YouTube App on iOS showing a tab bar.">
+<img src="{{ site.baseurl }}/images/posts/2011/12/introductionToUITabBarController/youtubeappdemoscreen.png" width="50%" alt="The YouTube App on iOS showing a tab bar.">
 
 As you can see along the bottom of the screen there's a tab bar with different "modes" which the user can select. Placing these modes in a navigation controller wouldn't make sense since they don't link together in any way (except that they all carry out YouTube related actions). Selecting different tabs loads a new root view and from there new views are pushed onto the navigation stack _for that view controller_. It's fairly logical. _Each tab corresponds to a specific view controller. When the users taps a tab, the root view for the corresponding view controller replaces the previously visible view._ 
 
@@ -78,7 +78,7 @@ Remember to `@synthesize` the property in the AppDelegate's implementation file.
 
 The code between the two comments is the code that you need to add to the method's body. Here, we've initialised the first three UIViewControllers and thrown them into an array. We've then initialised the UITabBarController and used the method `setViewControllers: animated:` to set the array of UIViewControllers as the view controllers that our UITabBarController needs to manage. Each tab represents a view controller and the first tab (going from the left of the screen) represents the view controller at index 0 in your array and the last tab represents the last view controller in your array. Finally, we've set our UITabBarController as the root view of our application's window (remember, a UITabBarController can only be the root view and can't be a child view). If you build and run your application now, you'll find that everything works. Your application launches and presents you with a tab bar. Tapping on the individual tabs will load the UIViewController for that tab. There's just one small problem. There's no way to distinguish individual tabs since the tabs don't have a title or an icon. It's relatively easy to fix this however and requires just a small snippet of code in each of your view controllers. 
 
-![The Application So Far](/images/posts/2011/12/introductionToUITabBarController/tabbarapps1.png) Our application so far. 
+![The Application So Far]({{ site.baseurl }}/images/posts/2011/12/introductionToUITabBarController/tabbarapps1.png) Our application so far. 
 
 ## Customising Tabs
 
@@ -177,7 +177,7 @@ This code should seem fairly familiar. We've initialised the remaining three UIV
 
 You should end up with an application that looks like this:
 
-![The Application with a more button](/images/posts/2011/12/introductionToUITabBarController/tabbarapps2.png)
+![The Application with a more button]({{ site.baseurl }}/images/posts/2011/12/introductionToUITabBarController/tabbarapps2.png)
 
 Note the more tab. Tapping it presents you with a table (which is actually an embedded [UINavigationController](/2011/09/04/an-introduction-to-uinavigationcontroller/)) with the rest of your tabs available for access (although they are hardly tabs any more). You also get an edit button at the top of the list which allows you to reorganise the UITabBar and move tabs in and out of the more section. Whilst tapping it enables the editing mode, you need to add some more (basic) code to get it to save the position of the icons. Whilst this is really basic stuff using NSUserDefaults, it would make this already lengthy tutorial even longer. 
 
