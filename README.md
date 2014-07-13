@@ -1,0 +1,3 @@
+# This Project is Dead
+
+I'm keeping the repository here for sentimental reasons more than anything. I know the content is mostly inaccurate and outdated---it was written when I was just getting started with programming. Maybe somebody can study the site for pointers on using Jekyll but honestly, there's better sites to learn from out there. Maybe [this](https://github.com/alexjohnj/geographyas/) would be better to learn from. Or the [official docs](http://jekyllrb.com).
